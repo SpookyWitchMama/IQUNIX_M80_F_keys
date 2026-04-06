@@ -1,0 +1,9 @@
+#check if fix
+echo 2 | sudo tee -a /sys/module/hid_apple/parameters/fnmode
+
+
+#permafix
+creating the file /etc/modprobe.d/hid_apple.conf
+containing:
+
+options hid_apple fnmode=2
